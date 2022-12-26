@@ -1,12 +1,12 @@
-# gradient_svm_kernelsvm
 
-## Introduction
+
+# Introduction
 In the following coolab notebook we will perform three examples:
  *  A descent gradient exercise.
  *  One with support vector machine (SVM)
  *   One with the SVM kernel
  
-## Descent gradient exercise
+# Descent gradient exercise
 In the following example we will use our own input and output data. These were created as follows:
 ```python
 #We create our data set
@@ -53,7 +53,7 @@ def mse(y, y_hat):
 Once the **mse** has been calculated, we obtain the following plan:
 ![image](https://user-images.githubusercontent.com/115313115/209488231-e63ee037-a7ab-49f3-8027-df8b8ba28f13.png)
 
-## Linear SVM
+# Linear SVM
 
 For this example we will use the **pima-indians-diabetes.csv** dataset, in order to predict the output using the SVM method, in this case we will normalize our outputs and separate our dataset manually into validation and test data, finally we will compare the test outputs, with the predicted outputs with the test data. Some code extracts to take into account are:
 ```python
@@ -81,7 +81,7 @@ svc = LinearSVC(C=100, loss="hinge")
 
 svc.fit(x_train, y_train)
 ```
-## Kernel SVM
+# Kernel SVM
 
 For this example we will obtain our data from the sklearn **make circles** library, once we obtain our data we will normalize the inputs and do the separation of validation and test data manually, we will prepare the model and train it, we will evaluate the results with the confusion matrix, the precision and recall, obtained.
 Some code excerpts relevant to this exercise:
@@ -107,7 +107,7 @@ from sklearn.svm import SVC
 svk = SVC(kernel='poly', degree=3, coef0=1, C=5)
 svk.fit(x_train, y_train)
 ```
-# Where our model results in the following graph:
+### Where our model results in the following graph:
 
 ![image](https://user-images.githubusercontent.com/115313115/209490217-0bc50912-62c9-48cf-b252-2908db08f628.png)
 
